@@ -607,14 +607,14 @@ export default function ShieldPage({ onGoToKatalog }: { onGoToKatalog?: (categor
   return (
     <div className="w-full bg-gray-50 min-h-screen font-sans">
 
-      {/* ── SECONDARY NAVIGATION BAR ── */}
-      <div className="w-full bg-[#1B4D3E] shadow-sm border-t border-white/10">
-        <div className="max-w-[1440px] mx-auto px-6 py-2.5 flex items-center justify-between gap-4">
+      {/* ── SECONDARY NAVIGATION BAR — FLOATING ── */}
+      <div className="w-full px-6 pt-4 pb-1 max-w-[1440px] mx-auto">
+        <div className="bg-[#1B4D3E] rounded-2xl shadow-lg shadow-[#1B4D3E]/30 px-5 py-2.5 flex items-center justify-between gap-4">
           
           {/* Paling kiri: tombol "≡ Semua Kategori" */}
           <button
             onClick={() => onGoToKatalog && onGoToKatalog('Semua Produk')}
-            className="bg-[#2D6A4F] hover:bg-[#224F3B] text-white font-bold text-sm px-4 py-2 rounded transition-colors flex items-center gap-2 shrink-0">
+            className="bg-[#2D6A4F] hover:bg-[#163D30] text-white font-bold text-sm px-4 py-1.5 rounded-xl transition-colors flex items-center gap-2 shrink-0">
             <span className="text-base leading-none">≡</span> Semua Kategori
           </button>
 
@@ -631,7 +631,7 @@ export default function ShieldPage({ onGoToKatalog }: { onGoToKatalog?: (categor
                 key={label}
                 href="#"
                 onClick={(e) => { e.preventDefault(); onGoToKatalog && onGoToKatalog(cat); }}
-                className="text-white hover:underline hover:text-white/90 font-medium transition-all cursor-pointer"
+                className="text-white/85 hover:text-white hover:underline font-medium transition-all cursor-pointer"
               >
                 {label}
               </a>
@@ -639,14 +639,14 @@ export default function ShieldPage({ onGoToKatalog }: { onGoToKatalog?: (categor
           </div>
 
           {/* Paling kanan: search bar kecil */}
-          <div className="relative w-[220px] shrink-0">
+          <div className="relative w-[200px] shrink-0">
             <input
               type="text"
               placeholder="Cari produk..."
-              className="w-full bg-white text-gray-800 text-xs px-4 py-2 pr-9 rounded-full focus:outline-none focus:ring-2 focus:ring-[#86EFAC]/50 border border-gray-100"
+              className="w-full bg-white/10 text-white placeholder:text-white/50 text-xs px-4 py-1.5 pr-9 rounded-full focus:outline-none focus:ring-2 focus:ring-white/30 border border-white/20 backdrop-blur-sm"
             />
             {/* Search Icon at the right */}
-            <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">
+            <span className="absolute right-3 top-1/2 -translate-y-1/2 text-white/50 pointer-events-none">
               <Search size={14} className="stroke-[2.5]" />
             </span>
           </div>
@@ -657,7 +657,7 @@ export default function ShieldPage({ onGoToKatalog }: { onGoToKatalog?: (categor
       {/* ══════════════════════════════════════════════════════════════════════
           SECTION 1 — HERO BANNER (3-COLUMN LAYOUT)
       ══════════════════════════════════════════════════════════════════════ */}
-      <section className="max-w-[1440px] mx-auto px-6 pt-6 pb-2">
+      <section className="max-w-[1440px] mx-auto px-6 pt-1 pb-2">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-3 items-stretch">
 
           {/* ── COLUMN LEFT (50% / 2-cols on lg) ── */}

@@ -211,7 +211,7 @@ export default function Header({ onViewChange, currentView, onGoToKatalog }: {
                   transition={{ type: "spring", stiffness: 380, damping: 30 }}
                 />
               )}
-              <span className="relative z-10">Komunitas</span>
+              <span className="relative z-10">Connect</span>
             </button>
           </nav>
 
@@ -475,7 +475,7 @@ export default function Header({ onViewChange, currentView, onGoToKatalog }: {
                   transition={{ type: "spring", stiffness: 380, damping: 30 }}
                 />
               )}
-              <span className="relative z-10">Komunitas</span>
+              <span className="relative z-10">Connect</span>
             </button>
           </nav>
 

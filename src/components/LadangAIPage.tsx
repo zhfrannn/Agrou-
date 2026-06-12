@@ -19,6 +19,9 @@ type Path =
   | "strategi" 
   | "stok" 
   | "keuangan" 
+  | "proteksi"
+  | "ekspor"
+  | "laporan"
   | null;
 type Stage = 0 | 1 | 2 | 3;
 
@@ -31,28 +34,33 @@ interface Message {
 
 // ─── Static Data ─────────────────────────────────────────────────────────────
 const GENERAL_HISTORY = [
-  { id: 1, label: "Diagnosis Padi — Blast", path: "diagnosis", time: "2j lalu" },
+  { id: 1, label: "Diagnosis Padi — Blast Fungal", path: "diagnosis", time: "2j lalu" },
   { id: 2, label: "Rekomendasi Sprayer Elektrik", path: "alat", time: "1 hari lalu" },
-  { id: 3, label: "Diagnosis Cabai — Layu", path: "diagnosis", time: "3 hari lalu" },
+  { id: 3, label: "Diagnosis Cabai — Layu Fusarium", path: "diagnosis", time: "3 hari lalu" },
 ];
 
 const KOPERASI_HISTORY = [
   { id: 1, label: "Analisis Keuangan Mei", path: "keuangan", time: "30m lalu" },
   { id: 2, label: "Stok Sayuran Overstock", path: "stok", time: "2j lalu" },
-  { id: 3, label: "Strategi Ekspansi Rp 100Jt", path: "strategi", time: "Kemarin" },
+  { id: 3, label: "Strategi Ekspansi Rp 100jt", path: "strategi", time: "Kemarin" },
+  { id: 4, label: "Regulasi Ekspor ke Jepang", path: "ekspor", time: "2 hari lalu" },
+  { id: 5, label: "Laporan Bulanan Juni", path: "laporan", time: "3 hari lalu" },
 ];
 
 const PATH_COLORS: Record<string, string> = {
   // General Paths
-  diagnosis: "#2D6A4F",
-  cari: "#F77F00",
-  alat: "#10B981",
+  diagnosis: "#1B4332",
+  cari: "#0369A1",
+  alat: "#0F766E",
   roleplay: "#D97706",
+  proteksi: "#15803D",
   // Koperasi Paths
-  analisis: "#6366F1",
-  strategi: "#4F46E5",
-  stok: "#EC4899",
-  keuangan: "#06B6D4",
+  analisis: "#6D28D9",
+  strategi: "#7C3AED",
+  stok: "#BE185D",
+  keuangan: "#0E7490",
+  ekspor: "#065F46",
+  laporan: "#92400E",
 };
 
 const COMMODITIES_TANI = [
